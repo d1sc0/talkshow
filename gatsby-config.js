@@ -1,14 +1,10 @@
 module.exports = {
   siteMetadata: {
-    siteTitle: `Gatsby Bulma Blog`,
-    author: {
-      name: `Stuart Mackenzie`,
-      summary: `Stuart is an Executive Director and Coach at FutureGov (Becoming TPXimpact). Stuart is also known for being a father, husband, runner, photography nerd, dog owner and exotic disco dancer. He hates writing about himself in the third person!`,
-    },
-    description: `A starter site with MDX ready (paginated) blog ready to style with Bulma.`,
-    siteUrl: `https://zealous-albattani-4659c1.netlify.app`,
+    siteTitle: `Another Talk Show`,
+    description: `A podcast where a fairly ordinary host interviews interesting people who aren't famous.`,
+    siteUrl: `https://anothertalk.show`,
     social: {
-      twitter: `_disco`,
+      twitter: `_ordianryhost`,
     },
   },
   plugins: [

@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { Link, graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import Bio from '../components/bio'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
 import '../styles.scss'
@@ -23,7 +22,6 @@ const PostTemplate = ({ data }) => {
           <MDXRenderer>{post.body}</MDXRenderer>
         </div>
       </div>
-      <Bio />
 
       <nav
         className="pagination py-4"
