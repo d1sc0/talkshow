@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+// If need, change your variables before importing Bulma
+//$title-color: #ff0000;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900');
+
+$family-sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, Roboto, Segoe UI,
+  Helvetica, Arial, sans-serif;
+@import '~bulma/bulma.sass';
