@@ -51,11 +51,11 @@ const Layout = ({ children }) => {
             className={`navbar-menu ${isActive ? 'is-active' : ''}`}
           >
             <div className="navbar-end">
-              <Link to="/posts" className="navbar-item">
-                Episodes
-              </Link>
               <Link to="/about" className="navbar-item">
                 About
+              </Link>
+              <Link to="/episodes" className="navbar-item">
+                Episodes
               </Link>
               <Link to="/contact" className="navbar-item">
                 Contact

@@ -112,7 +112,7 @@ module.exports = {
             }
             `,
             output: '/rss.xml',
-            title: 'Gatsby Bulma Blog RSS Feed',
+            title: 'Another Talk Show RSS',
           },
         ],
       },
