@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-bulma-blog",
+  "name": "talkshow",
   "private": true,
-  "description": "A starter for a site with paginated blog and posts powered by Gatsby Markdown ready to style with Bulma",
+  "description": "A gatsby built site for hosting a podcast. Episode posts will be formulated in MDX format. The audio stored in a google cloud bucket. Will use the gatsby feed plugin to form a valid podcast feed for podcast services.",
   "version": "0.1.0",
   "author": "Stuart Mackenzie",
   "dependencies": {
