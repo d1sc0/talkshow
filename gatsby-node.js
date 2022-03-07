@@ -42,7 +42,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const numPages = Math.ceil(posts.length / postsPerPage)
   Array.from({ length: numPages }).forEach((_, i) => {
     createPage({
-      path: i === 0 ? `/posts` : `/posts/${i + 1}`,
+      path: i === 0 ? `/episodes` : `/episodes/${i + 1}`,
       component: path.resolve('./src/templates/post-list-template.js'),
       context: {
         limit: postsPerPage,
@@ -61,7 +61,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
 
       createPage({
-        path: `posts/${post.slug}`,
+        path: `episodes/${post.slug}`,
         component: postTemplate,
         context: {
           id: post.id,

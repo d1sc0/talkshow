@@ -30,11 +30,11 @@ const PostTemplate = ({ data }) => {
       >
         <div className="container">
           <h4 className="is-size-6 has-text-weight-bold py-3">
-            Explore more posts...
+            Explore more episodes...
           </h4>
           {previous && (
             <Link
-              to={`/posts/${previous.slug}`}
+              to={`/episodes/${previous.slug}`}
               className="pagination-previous"
               rel="prev"
             >
@@ -43,7 +43,7 @@ const PostTemplate = ({ data }) => {
           )}
           {next && (
             <Link
-              to={`/posts/${next.slug}`}
+              to={`/episodes/${next.slug}`}
               className="pagination-next"
               rel="next"
             >

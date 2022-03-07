@@ -15,14 +15,14 @@ const PostList = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <Seo title="Posts" />
+      <Seo title="Episodes" />
       <h1 className="title is-size-2">Posts</h1>
       {posts.map(post => {
         const title = post.frontmatter.title || post.slug
         return (
           <div className="block" key={post.id}>
             <h2 className="is-size-4">
-              <Link to={`/posts/${post.slug}`}>{title}</Link>
+              <Link to={`/episodes/${post.slug}`}>{title}</Link>
             </h2>
             <small className="is-size-7">{post.frontmatter.date}</small>
             <p className="py-2">{post.excerpt}</p>
@@ -37,7 +37,7 @@ const PostList = ({ data, pageContext }) => {
           aria-label="pagination"
         >
           <Link
-            to={`/posts/${prevPage}`}
+            to={`/episodes/${prevPage}`}
             className="pagination-previous"
             rel="prev"
           >
@@ -52,7 +52,7 @@ const PostList = ({ data, pageContext }) => {
           aria-label="pagination"
         >
           <Link
-            to={`/posts/${nextPage}`}
+            to={`/episodes/${nextPage}`}
             className="pagination-next"
             rel="next"
           >

@@ -12,14 +12,20 @@ $link: #fa4242;
 $weight-semibold: 700;
 $weight-bold: 800;
 .audioplayer {
+  margin-top: 0.4rem;
   margin-bottom: 0.75rem;
   width: 100%;
 }
-.rounded-corners {
+.rounded-corners,
+.button.is-black {
   border-radius: 10px;
 }
 .highlight {
   color: #fa4242;
+}
+
+.button.is-black:hover {
+  background-color: #fa4242 !important;
 }
 
 @import '~bulma/bulma.sass';

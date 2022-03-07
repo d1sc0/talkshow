@@ -52,7 +52,7 @@ const Layout = ({ children }) => {
           >
             <div className="navbar-end">
               <Link to="/posts" className="navbar-item">
-                Posts
+                Episodes
               </Link>
               <Link to="/about" className="navbar-item">
                 About
