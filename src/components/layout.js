@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import '../styles.scss'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faRss } from '@fortawesome/free-solid-svg-icons'
+//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+//import { faRss } from '@fortawesome/free-solid-svg-icons'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -20,8 +20,8 @@ const Layout = ({ children }) => {
   return (
     <div>
       <nav className="navbar" role="navigation" aria-label="main navigation">
-        <div className="container is-max-widescreen">
-          <div className="navbar-brand">
+        <div className="container is-max-widescreen pt-4">
+          <div className="navbar-brand px-0">
             <Link className="navbar-item has-text-weight-bold is-size-4" to="/">
               {data.site.siteMetadata.siteTitle}
             </Link>
@@ -53,17 +53,17 @@ const Layout = ({ children }) => {
               <Link to="/contact" className="navbar-item">
                 Contact
               </Link>
-              <Link to="/rss.xml" className="navbar-item">
+              {/*  <Link to="/rss.xml" className="navbar-item">
                 <FontAwesomeIcon icon={faRss} />
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
       </nav>
 
-      <section class="section">
+      <section class="section px-4">
         <div class="container is-max-widescreen">
-          <div className="main-content">{children}</div>
+          <div className="">{children}</div>
         </div>
       </section>
 

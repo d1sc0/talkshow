@@ -7,10 +7,12 @@ Another Talk Show
 
 - Update config files from template repo
 - Update files from posts to episodes
-- Style homepage
-- Style episodes list and posts
+- Update/Style homepage
+- Style episodes list and posts - adding in audio bits
 - Create podcast feed and validate with services
 - Twitter and facebook cards via SEO component
 - Host on firebase and setup CD pipeline?
 
 ## Maybe things for later (Roadmap)
+
+- Creating tag or category pages?
