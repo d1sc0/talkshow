@@ -19,10 +19,17 @@ const Layout = ({ children }) => {
 
   return (
     <div>
-      <nav className="navbar" role="navigation" aria-label="main navigation">
+      <nav
+        className="navbar is-transparent"
+        role="navigation"
+        aria-label="main navigation"
+      >
         <div className="container is-max-widescreen pt-4">
           <div className="navbar-brand px-0">
-            <Link className="navbar-item has-text-weight-bold is-size-4" to="/">
+            <Link
+              className="navbar-item has-text-weight-semibold is-size-4"
+              to="/"
+            >
               {data.site.siteMetadata.siteTitle}
             </Link>
             <button

@@ -6,5 +6,16 @@
 
 $family-sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, Roboto, Segoe UI,
   Helvetica, Arial, sans-serif;
+$text: hsl(0, 0%, 14%);
 $link: #fa4242;
+$weight-semibold: 700;
+$weight-bold: 800;
+
+.rounded-image {
+  border-radius: 10px;
+}
+.highlight {
+  color: #fa4242;
+}
+
 @import '~bulma/bulma.sass';
