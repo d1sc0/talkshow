@@ -16,16 +16,25 @@ $weight-bold: 800;
   margin-bottom: 0.75rem;
   width: 100%;
 }
+.ficons a {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+footer a {
+  color: hsl(0, 0%, 14%);
+}
+footer a:hover {
+  color: #fa4242;
+}
+.button.is-black:hover {
+  background-color: #fa4242 !important;
+}
 .rounded-corners,
 .button.is-black {
   border-radius: 10px;
 }
 .highlight {
   color: #fa4242;
-}
-
-.button.is-black:hover {
-  background-color: #fa4242 !important;
 }
 
 @import '~bulma/bulma.sass';

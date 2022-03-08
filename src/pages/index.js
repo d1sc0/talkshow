@@ -78,7 +78,7 @@ const HomePage = ({ data }) => {
         <div className="column">
           <Link to="">
             <button className="button is-black is-medium is-fullwidth has-text-weight-semibold">
-              <span class="icon">
+              <span className="icon">
                 <FaPodcast />
               </span>
               <span>Apple Podcasts</span>
@@ -88,7 +88,7 @@ const HomePage = ({ data }) => {
         <div className="column">
           <Link to="">
             <button className="button is-black is-medium is-fullwidth has-text-weight-semibold">
-              <span class="icon">
+              <span className="icon">
                 <SiGooglepodcasts />
               </span>
               <span>Google Podcasts</span>
@@ -98,7 +98,7 @@ const HomePage = ({ data }) => {
         <div className="column">
           <Link to="">
             <button className="button is-black is-medium is-fullwidth has-text-weight-semibold">
-              <span class="icon">
+              <span className="icon">
                 <FaSpotify />
               </span>
               <span>Spotify Podcasts</span>

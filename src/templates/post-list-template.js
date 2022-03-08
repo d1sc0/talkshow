@@ -16,7 +16,7 @@ const PostList = ({ data, pageContext }) => {
   return (
     <Layout>
       <Seo title="Episodes" />
-      <h1 className="title is-size-2">Posts</h1>
+      <h1 className="title is-size-2">Episodes</h1>
       {posts.map(post => {
         const title = post.frontmatter.title || post.slug
         return (
