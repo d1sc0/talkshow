@@ -38,7 +38,8 @@ const PostTemplate = ({ data }) => {
               className="pagination-previous"
               rel="prev"
             >
-              ← {previous.frontmatter.title}
+              ← EP{previous.frontmatter.episodeNumber}:
+              {previous.frontmatter.title}
             </Link>
           )}
           {next && (
@@ -47,7 +48,7 @@ const PostTemplate = ({ data }) => {
               className="pagination-next"
               rel="next"
             >
-              {next.frontmatter.title} →
+              EP{next.frontmatter.episodeNumber}: {next.frontmatter.title} →
             </Link>
           )}
         </div>

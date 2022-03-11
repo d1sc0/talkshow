@@ -9,9 +9,10 @@ Another Talk Show
 - Update files from posts to episodes - done
 - Update/Style homepage - done
 - Add update about page - done
+- style episode lists - adding in audio bits - done
+- add helpers for file size and episode durtation
 - Style 404 page
 - Style episode posts - adding in audio bits
-- style episode lists - adding in audio bits
 - Create podcast feed and validate with services
 - update subscribe links across site
 - Twitter and facebook cards via SEO component
