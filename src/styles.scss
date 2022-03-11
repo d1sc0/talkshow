@@ -26,6 +26,18 @@ footer a {
 footer a:hover {
   color: #fa4242;
 }
+
+.episode-card {
+  border-color: #dbdbdb;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.subtle-link,
+.subtle-link:hover {
+  color: currentColor;
+}
+
 .button.is-black:hover {
   background-color: #fa4242 !important;
 }

@@ -73,18 +73,25 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        episodeSummary
+        episodeMp3
+        episodeBytes
+        episodeSeconds
+        episodeNumber
       }
     }
     previous: mdx(id: { eq: $previousPostId }) {
       slug
       frontmatter {
         title
+        episodeNumber
       }
     }
     next: mdx(id: { eq: $nextPostId }) {
       slug
       frontmatter {
         title
+        episodeNumber
       }
     }
   }

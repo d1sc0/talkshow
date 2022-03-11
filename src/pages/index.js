@@ -6,15 +6,17 @@ import { StaticImage } from 'gatsby-plugin-image'
 import '../styles.scss'
 import { FaPodcast, FaSpotify } from 'react-icons/fa'
 import { SiGooglepodcasts } from 'react-icons/si'
+import { EpisodeSizer, EpisodeDuration } from '../helpers/helper.js'
 
 const HomePage = ({ data }) => {
   const latestPost = data.allMdx.nodes[0]
-  const episode =
+  const episodeTitle =
     'Episode ' +
     latestPost.frontmatter.episodeNumber +
     ': ' +
     latestPost.frontmatter.title
-
+  const episodeSize = EpisodeSizer(latestPost.frontmatter.episodeBytes, 2)
+  const episodeLength = EpisodeDuration(latestPost.frontmatter.episodeSeconds)
   return (
     <Layout>
       <Seo title="Home" />
@@ -43,33 +45,43 @@ const HomePage = ({ data }) => {
       </div>
 
       <div className="section px-3">
-        <div className="columns rounded-corners has-background-grey has-text-white ">
+        <div className="columns rounded-corners has-background-grey has-text-white p-3">
           <div className="column is-two-fifths">
-            <div className="px-3">
-              LATEST EPISODE
-              <h2 className="is-size-3 is-size-4-touch has-text-weight-semibold">
-                {episode}
-              </h2>
-              <span className="is-uppercase is-size-7">
-                {latestPost.frontmatter.date}
-              </span>
-            </div>
+            LATEST EPISODE
+            <h2 className="is-size-3 is-size-4-touch has-text-weight-semibold py-2">
+              <Link
+                to={`/episodes/${latestPost.slug}`}
+                className="has-text-white"
+              >
+                {episodeTitle}
+              </Link>
+            </h2>
+            <p className="is-uppercase is-size-7">
+              Posted: {latestPost.frontmatter.date} <br />
+              Duration: {episodeLength} // Size: {episodeSize}
+            </p>
           </div>
           <div className="column is-vcentered">
-            <div className="px-3">
-              <audio
-                className="audioplayer"
-                src={latestPost.frontmatter.episodeMp3}
-                controls
+            <audio
+              className="audioplayer"
+              src={latestPost.frontmatter.episodeMp3}
+              controls
+            >
+              Your browser does not support the audio player!{' '}
+              <a href={latestPost.frontmatter.episodeMp3}>
+                You can download here instead
+              </a>
+              <track kind="captions" label={episodeTitle} />
+            </audio>
+            <p>
+              {latestPost.frontmatter.episodeSummary}{' '}
+              <Link
+                to={`/episodes/${latestPost.slug}`}
+                className="has-text-white has-text-weight-semibold"
               >
-                Your browser does not support the audio player!{' '}
-                <a href={latestPost.frontmatter.episodeMp3}>
-                  You can download here instead
-                </a>
-                <track kind="captions" label={episode} />
-              </audio>
-              <p>{latestPost.frontmatter.episodeSummary}</p>
-            </div>
+                [...read show notes]
+              </Link>
+            </p>
           </div>
         </div>
       </div>
@@ -124,6 +136,7 @@ export const pageQuery = graphql`
   query latestPost {
     allMdx(sort: { order: DESC, fields: frontmatter___date }, limit: 1) {
       nodes {
+        slug
         id
         frontmatter {
           title
