@@ -79,34 +79,34 @@ const HomePage = ({ data }) => {
       </div>
       <div className="columns mb-0">
         <div className="column">
-          <Link to="">
+          <a href="">
             <button className="button is-black is-medium is-fullwidth has-text-weight-semibold">
               <span className="icon">
                 <FaPodcast />
               </span>
               <span>Apple Podcasts</span>
             </button>
-          </Link>
+          </a>
         </div>
         <div className="column">
-          <Link to="">
+          <a href="">
             <button className="button is-black is-medium is-fullwidth has-text-weight-semibold">
               <span className="icon">
                 <SiGooglepodcasts />
               </span>
               <span>Google Podcasts</span>
             </button>
-          </Link>
+          </a>
         </div>
         <div className="column">
-          <Link to="">
+          <a href="">
             <button className="button is-black is-medium is-fullwidth has-text-weight-semibold">
               <span className="icon">
                 <FaSpotify />
               </span>
               <span>Spotify Podcasts</span>
             </button>
-          </Link>
+          </a>
         </div>
       </div>
       <div className="section p-0 has-text-centered">

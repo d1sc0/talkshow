@@ -76,22 +76,22 @@ const Layout = ({ children }) => {
 
       <footer className="footer has-background-white pb-3">
         <p className="has-text-centered py-1 ficons">
-          <Link to="https://twitter.com/ordinaryhost">
+          <a href="https://twitter.com/ordinaryhost">
             <FaTwitter size="1.9rem" />
-          </Link>
-          <Link to="https://www.instagram.com/anothertalk.show/">
+          </a>
+          <a href="https://www.instagram.com/anothertalk.show/">
             <FaInstagram size="1.9rem" />
-          </Link>
-          <Link to="https://podcasts.apple.com/gb/podcast/another-talk-show/id1551385867">
+          </a>
+          <a href="https://podcasts.apple.com/gb/podcast/another-talk-show/id1551385867">
             <FaPodcast size="1.9rem" />
-          </Link>
-          <Link to="https://podcasts.google.com/feed/aHR0cHM6Ly9hbm90aGVydGFsay5zaG93L3BvZGNhc3QtcnNzLWZlZWQueG1s">
+          </a>
+          <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbm90aGVydGFsay5zaG93L3BvZGNhc3QtcnNzLWZlZWQueG1s">
             <SiGooglepodcasts size="1.9rem" />
-          </Link>
+          </a>
 
-          <Link to="https://open.spotify.com/show/2Wf8butZI229NlRVPQHU6z">
+          <a href="https://open.spotify.com/show/2Wf8butZI229NlRVPQHU6z">
             <FaSpotify size="1.9rem" />
-          </Link>
+          </a>
         </p>
         <p className="has-text-centered py-1">
           <Link to="/">Home</Link>

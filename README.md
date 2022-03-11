@@ -5,11 +5,15 @@ Another Talk Show
 
 ## 🚀 To-do list
 
-- Update config files from template repo
-- Update files from posts to episodes
-- Update/Style homepage
-- Style episodes list and posts - adding in audio bits
+- Update config files from template repo - done
+- Update files from posts to episodes - done
+- Update/Style homepage - done
+- Add update about page - done
+- Style 404 page
+- Style episode posts - adding in audio bits
+- style episode lists - adding in audio bits
 - Create podcast feed and validate with services
+- update subscribe links across site
 - Twitter and facebook cards via SEO component
 - Host on firebase and setup CD pipeline?
 
