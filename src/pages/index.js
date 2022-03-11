@@ -50,6 +50,9 @@ const HomePage = ({ data }) => {
               <h2 className="is-size-3 is-size-4-touch has-text-weight-semibold">
                 {episode}
               </h2>
+              <span className="is-uppercase is-size-7">
+                {latestPost.frontmatter.date}
+              </span>
             </div>
           </div>
           <div className="column is-vcentered">
