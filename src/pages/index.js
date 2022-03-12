@@ -60,7 +60,7 @@ const HomePage = ({ data }) => {
             </h2>
             <MetaShare meta={postMeta} />
           </div>
-          <div className="column is-vcentered">
+          <div className="column">
             <audio
               className="audioplayer"
               src={latestPost.frontmatter.episodeMp3}
@@ -72,15 +72,15 @@ const HomePage = ({ data }) => {
               </a>
               <track kind="captions" label={episodeTitle} />
             </audio>
-            <p>
-              {latestPost.frontmatter.description}{' '}
+            <div>{latestPost.frontmatter.description}</div>
+            <div className="py-2 has-text-right">
               <Link
-                to={`/episodes/${latestPost.slug}`}
+                to="/episodes"
                 className="has-text-white has-text-weight-semibold"
               >
-                [...read show notes]
+                [...More Episodes]
               </Link>
-            </p>
+            </div>
           </div>
         </div>
       </div>
@@ -122,7 +122,7 @@ const HomePage = ({ data }) => {
       </div>
       <div className="section p-0 has-text-centered">
         <p className="is-underlined">
-          <Link to="/feed.xml">RSS Feed</Link>
+          <Link to="/rss.xml">RSS Feed</Link>
         </p>
       </div>
     </Layout>

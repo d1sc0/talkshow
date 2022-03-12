@@ -6,7 +6,12 @@ episodeMp3: https://storage.googleapis.com/anothertalk-show/s1e1-sound-check.mp3
 episodeBytes: 3189425
 episodeSeconds: 198
 episodeNumber: 9
+postImages:
+  - '../images/page-images/hello-stu.jpg'
+  - '../images/post-images/shiprock.jpg'
 ---
+
+import { getImage, GatsbyImage } from 'gatsby-plugin-image'
 
 Lorem markdownum: lydia sepulcrum iubeatis tuisque mixtam et marem, sub ad
 cuspide iubar. Videoque creatus aures altera Tereus terret superum quantum
@@ -28,6 +33,14 @@ vellemque Bisaltida.
         vpiLaserFlat(public, systrayHyper(4));
         mouseArt = sambaModelContextual;
     }
+
+<div className="small-post-image">
+  <GatsbyImage
+    alt="Stuart Mackenzie - host, producer, researcher, marketing manager and web developer"
+    image={getImage(props.frontmatter.postImages[1])}
+    className="is-pulled-right ml-4 mb-4 rounded-corners"
+  />
+</div>
 
 Varas promere opacae et commune aevum terra moram perosus quam, _actis commune
 auras_ Astyages relinquit. Est Aiacem pensaque caelum stultae perque. Ausa quare

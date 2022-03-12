@@ -134,5 +134,11 @@ footer a:hover {
 .highlight {
   color: #fa4242;
 }
+.medium-post-image .gatsby-image-wrapper {
+  width: 40vw;
+}
+.small-post-image .gatsby-image-wrapper {
+  width: 20vw;
+}
 
 @import '~bulma/bulma.sass';

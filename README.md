@@ -14,7 +14,7 @@ Another Talk Show
 - create component for post metadata and sharing - done
 - Host on firebase and setup actions for deploy pipeline - done
 - move fonts to local - done
-- Style 404 page
+- Style 404 page - done
 - Style episode posts - adding in audio bits
 - Create serverless contact form?
 - Create podcast feed and validate with services
