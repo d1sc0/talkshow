@@ -37,8 +37,8 @@ const HomePage = ({ data }) => {
               interviews <span className="highlight">interesting people</span>{' '}
               who aren't famous.
             </p>
-            <p className="is-size-6 pt-3">
-              <Link to="/about" className="is-underlined">
+            <p className="is-size-5 pt-3">
+              <Link to="/about" className="has-text-weight-semibold">
                 Find out more...
               </Link>
             </p>
@@ -76,7 +76,7 @@ const HomePage = ({ data }) => {
             <div className="py-2 has-text-right">
               <Link
                 to="/episodes"
-                className="has-text-white has-text-weight-semibold"
+                className="is-size-5 has-text-white has-text-weight-semibold"
               >
                 [...More Episodes]
               </Link>
@@ -121,8 +121,10 @@ const HomePage = ({ data }) => {
         </div>
       </div>
       <div className="section p-0 has-text-centered">
-        <p className="is-underlined">
-          <Link to="/rss.xml">RSS Feed</Link>
+        <p className="is-size-5">
+          <Link to="/rss.xml" className="has-text-weight-semibold">
+            RSS Feed
+          </Link>
         </p>
       </div>
     </Layout>
