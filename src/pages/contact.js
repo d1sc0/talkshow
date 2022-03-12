@@ -44,17 +44,9 @@ const ContactPage = () => {
     <Layout>
       <Seo description="How to get in touch with us" title="Contact" />
       <h1 className="title is-size-2">Contact</h1>
-      <article className={`message is-info ${isHidden ? '' : 'is-hidden'}`}>
-        <div className="message-header">
-          <p>Success</p>
-        </div>
-        <div className="message-body">
-          Thanks for getting in touch. We'll get back to you really soon!
-        </div>
-      </article>
       <div className="section px-0">
         <form onSubmit={handleOnSubmit}>
-          <div className="field">
+          <div className={`field ${isHidden ? 'is-hidden' : ''}`}>
             <label className="label">Email</label>
             <div className="control">
               <input
@@ -66,7 +58,7 @@ const ContactPage = () => {
               />
             </div>
           </div>
-          <div className="field">
+          <div className={`field ${isHidden ? 'is-hidden' : ''}`}>
             <label className="label">Name</label>
             <div className="control">
               <input
@@ -78,7 +70,7 @@ const ContactPage = () => {
               />
             </div>
           </div>
-          <div className="field">
+          <div className={`field ${isHidden ? 'is-hidden' : ''}`}>
             <label className="label">Message</label>
             <div className="control">
               <textarea
@@ -90,8 +82,16 @@ const ContactPage = () => {
               ></textarea>
             </div>
           </div>
+          <article className={`message is-info ${isHidden ? '' : 'is-hidden'}`}>
+            <div className="message-header">
+              <p>Success</p>
+            </div>
+            <div className="message-body">
+              Thanks for getting in touch. We'll get back to you really soon!
+            </div>
+          </article>
           <button
-            className="button is-success"
+            className={`button is-success ${isHidden ? 'is-hidden' : ''}`}
             type="submit"
             disable={isDisabled}
           >
