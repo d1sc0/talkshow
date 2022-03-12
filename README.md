@@ -13,6 +13,7 @@ Another Talk Show
 - add helpers for file size and episode durtation - done
 - create component for post metadata and sharing - done
 - Host on firebase and setup actions for deploy pipeline - done
+- move fonts to local - done
 - Style 404 page
 - Style episode posts - adding in audio bits
 - Create serverless contact form?
