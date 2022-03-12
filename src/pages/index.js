@@ -47,7 +47,7 @@ const HomePage = ({ data }) => {
       </div>
 
       <div className="section px-3">
-        <div className="columns rounded-corners has-background-grey has-text-white p-3">
+        <div className="columns rounded-corners has-background-grey-dark has-text-white p-3">
           <div className="column is-two-fifths">
             LATEST EPISODE
             <h2 className="is-size-3 is-size-4-touch has-text-weight-semibold py-2">
