@@ -10,9 +10,12 @@ Another Talk Show
 - Update/Style homepage - done
 - Add update about page - done
 - style episode lists - adding in audio bits - done
-- add helpers for file size and episode durtation
+- add helpers for file size and episode durtation - done
+- create component for post metadata and sharing - done
 - Style 404 page
 - Style episode posts - adding in audio bits
+- Host back on firebase?
+- Create serverless contact form?
 - Create podcast feed and validate with services
 - update subscribe links across site
 - Twitter and facebook cards via SEO component
