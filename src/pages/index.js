@@ -73,7 +73,7 @@ const HomePage = ({ data }) => {
               <track kind="captions" label={episodeTitle} />
             </audio>
             <p>
-              {latestPost.frontmatter.episodeSummary}{' '}
+              {latestPost.frontmatter.description}{' '}
               <Link
                 to={`/episodes/${latestPost.slug}`}
                 className="has-text-white has-text-weight-semibold"
@@ -140,7 +140,7 @@ export const pageQuery = graphql`
         frontmatter {
           title
           date(formatString: "DD MMM YYYY")
-          episodeSummary
+          description
           episodeMp3
           episodeBytes
           episodeSeconds

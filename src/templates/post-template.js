@@ -8,7 +8,6 @@ import '../styles.scss'
 const PostTemplate = ({ data }) => {
   const post = data.mdx
   const { previous, next } = data
-
   return (
     <Layout>
       <Seo
@@ -74,7 +73,6 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
-        episodeSummary
         episodeMp3
         episodeBytes
         episodeSeconds

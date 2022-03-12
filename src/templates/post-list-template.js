@@ -128,7 +128,6 @@ export const postListQuery = graphql`
           date(formatString: "DD MMM YYYY")
           title
           description
-          episodeSummary
           episodeMp3
           episodeBytes
           episodeSeconds
