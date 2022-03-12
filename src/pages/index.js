@@ -1,22 +1,24 @@
 import * as React from 'react'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
+import MetaShare from '../components/metashare'
 import { Link, graphql } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import '../styles.scss'
 import { FaPodcast, FaSpotify } from 'react-icons/fa'
 import { SiGooglepodcasts } from 'react-icons/si'
-import { EpisodeSizer, EpisodeDuration } from '../helpers/helper.js'
 
 const HomePage = ({ data }) => {
   const latestPost = data.allMdx.nodes[0]
-  const episodeTitle =
-    'Episode ' +
-    latestPost.frontmatter.episodeNumber +
-    ': ' +
-    latestPost.frontmatter.title
-  const episodeSize = EpisodeSizer(latestPost.frontmatter.episodeBytes, 2)
-  const episodeLength = EpisodeDuration(latestPost.frontmatter.episodeSeconds)
+  const episodeTitle = `Episode ${latestPost.frontmatter.episodeNumber}: ${latestPost.frontmatter.title}`
+  const postMeta = {
+    episodeSeconds: latestPost.frontmatter.episodeSeconds,
+    episodeBytes: latestPost.frontmatter.episodeBytes,
+    episodeTitle: episodeTitle,
+    episodeSlug: latestPost.slug,
+    episodeDate: latestPost.frontmatter.date,
+    metaStlye: 'has-text-white',
+  }
   return (
     <Layout>
       <Seo title="Home" />
@@ -56,10 +58,7 @@ const HomePage = ({ data }) => {
                 {episodeTitle}
               </Link>
             </h2>
-            <p className="is-uppercase is-size-7">
-              Posted: {latestPost.frontmatter.date} <br />
-              Duration: {episodeLength} // Size: {episodeSize}
-            </p>
+            <MetaShare meta={postMeta} />
           </div>
           <div className="column is-vcentered">
             <audio
@@ -91,7 +90,7 @@ const HomePage = ({ data }) => {
       </div>
       <div className="columns mb-0">
         <div className="column">
-          <a href="">
+          <a href="https://google.com">
             <button className="button is-black is-medium is-fullwidth has-text-weight-semibold">
               <span className="icon">
                 <FaPodcast />
@@ -101,7 +100,7 @@ const HomePage = ({ data }) => {
           </a>
         </div>
         <div className="column">
-          <a href="">
+          <a href="https://google.com">
             <button className="button is-black is-medium is-fullwidth has-text-weight-semibold">
               <span className="icon">
                 <SiGooglepodcasts />
@@ -111,7 +110,7 @@ const HomePage = ({ data }) => {
           </a>
         </div>
         <div className="column">
-          <a href="">
+          <a href="https://google.com">
             <button className="button is-black is-medium is-fullwidth has-text-weight-semibold">
               <span className="icon">
                 <FaSpotify />
@@ -123,7 +122,7 @@ const HomePage = ({ data }) => {
       </div>
       <div className="section p-0 has-text-centered">
         <p className="is-underlined">
-          <Link>RSS Feed</Link>
+          <Link to="/feed.xml">RSS Feed</Link>
         </p>
       </div>
     </Layout>

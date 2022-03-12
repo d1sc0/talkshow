@@ -2,11 +2,8 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Seo from '../components/seo'
 import Layout from '../components/layout'
-//import { MDXRenderer } from 'gatsby-plugin-mdx'
+import MetaShare from '../components/metashare'
 import '../styles.scss'
-import { EpisodeSizer, EpisodeDuration } from '../helpers/helper.js'
-import { FaTwitter, FaFacebook, FaShare } from 'react-icons/fa'
-import { MdEmail } from 'react-icons/md'
 
 const PostList = ({ data, pageContext }) => {
   const posts = data.allMdx.nodes
@@ -24,13 +21,15 @@ const PostList = ({ data, pageContext }) => {
       <Seo title={pageTitle} />
       <h1 className="title is-size-2">{pageTitle}</h1>
       {posts.map(post => {
-        const episodeTitle =
-          'Episode ' +
-          post.frontmatter.episodeNumber +
-          ': ' +
-          post.frontmatter.title
-        const episodeSize = EpisodeSizer(post.frontmatter.episodeBytes, 2)
-        const episodeLength = EpisodeDuration(post.frontmatter.episodeSeconds)
+        const episodeTitle = `Episode ${post.frontmatter.episodeNumber}: ${post.frontmatter.title}`
+        const postMeta = {
+          episodeSeconds: post.frontmatter.episodeSeconds,
+          episodeBytes: post.frontmatter.episodeBytes,
+          episodeTitle: episodeTitle,
+          episodeSlug: post.slug,
+          episodeDate: post.frontmatter.date,
+          metaStlye: '',
+        }
         return (
           <>
             <div className="article px-3 py-5">
@@ -45,34 +44,7 @@ const PostList = ({ data, pageContext }) => {
                         {episodeTitle}
                       </Link>
                     </h2>
-                    <p className="is-uppercase is-size-7">
-                      Posted: {post.frontmatter.date} <br />
-                      Duration: {episodeLength} // Size: {episodeSize}
-                    </p>
-                    <p className="level">
-                      <div className="level-left">
-                        <span class="level-item">
-                          <span class="icon is-small">
-                            <FaShare />
-                          </span>
-                        </span>
-                        <a class="level-item">
-                          <span class="icon is-small">
-                            <FaTwitter />
-                          </span>
-                        </a>
-                        <a class="level-item">
-                          <span class="icon is-small">
-                            <FaFacebook />
-                          </span>
-                        </a>
-                        <a class="level-item">
-                          <span class="icon is-small">
-                            <MdEmail />
-                          </span>
-                        </a>
-                      </div>
-                    </p>
+                    <MetaShare meta={postMeta} />
                   </div>
                 </div>
                 <div className="column is-vcentered">
