@@ -5,17 +5,17 @@ Another Talk Show
 
 ## 🚀 To-do list
 
-- ~~Update config files from template repo ~~ done
-- ~~Update files from posts to episodes ~~ done
-- ~~Update/Style homepage ~~ done
-- ~~Add update about page ~~ done
-- ~~style episode lists - adding in audio bits ~~ done
-- ~~add helpers for file size and episode durtation ~~ done
-- ~~create component for post metadata and sharing ~~ done
-- ~~Host on firebase and setup actions for deploy pipeline ~~ done
-- ~~move fonts to local ~~ done
-- ~~Style 404 page ~~ done
-- ~~Style episode posts - adding in audio bits ~~ done
+- ~~Update config files from template repo~~ done
+- ~~Update files from posts to episodes~~ done
+- ~~Update/Style homepage~~ done
+- ~~Add update about page~~ done
+- ~~style episode lists~~ done
+- ~~add helpers for file size and episode durtation~~ done
+- ~~create component for post metadata and sharing~~ done
+- ~~Host on firebase and setup actions for deploy pipeline~~ done
+- ~~move fonts to local~~ done
+- ~~Style 404 page~~ done
+- ~~Style episode posts~~ done
 - Create serverless contact form?
 - Create podcast feed and validate with services
 - update subscribe links across site
