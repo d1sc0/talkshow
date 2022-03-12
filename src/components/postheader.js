@@ -40,15 +40,27 @@ const PostHeader = ({ meta }) => {
       <p className="level is-mobile py-2">
         <div className="level-left">
           <span class="level-item">
-            <FaShare size="1.4rem" />
+            <FaShare size="1.4rem" alt="sharing icons" />
           </span>
-          <a className={`level-item ${style}`} href={twitterShare}>
+          <a
+            className={`level-item ${style}`}
+            href={twitterShare}
+            alt="twitter sharing"
+          >
             <FaTwitter size="1.4rem" />
           </a>
-          <a className={`level-item ${style}`} href={facebookShare}>
+          <a
+            className={`level-item ${style}`}
+            href={facebookShare}
+            alt="facebook sharing"
+          >
             <FaFacebook size="1.4rem" />
           </a>
-          <a className={`level-item ${style}`} href={emailShare}>
+          <a
+            className={`level-item ${style}`}
+            href={emailShare}
+            alt="email sharing"
+          >
             <MdEmail size="1.4rem" />
           </a>
         </div>
