@@ -5,6 +5,8 @@ import Layout from '../components/layout'
 //import { MDXRenderer } from 'gatsby-plugin-mdx'
 import '../styles.scss'
 import { EpisodeSizer, EpisodeDuration } from '../helpers/helper.js'
+import { FaTwitter, FaFacebook, FaShare } from 'react-icons/fa'
+import { MdEmail } from 'react-icons/md'
 
 const PostList = ({ data, pageContext }) => {
   const posts = data.allMdx.nodes
@@ -46,6 +48,30 @@ const PostList = ({ data, pageContext }) => {
                     <p className="is-uppercase is-size-7">
                       Posted: {post.frontmatter.date} <br />
                       Duration: {episodeLength} // Size: {episodeSize}
+                    </p>
+                    <p className="level">
+                      <div className="level-left">
+                        <span class="level-item">
+                          <span class="icon is-small">
+                            <FaShare />
+                          </span>
+                        </span>
+                        <a class="level-item">
+                          <span class="icon is-small">
+                            <FaTwitter />
+                          </span>
+                        </a>
+                        <a class="level-item">
+                          <span class="icon is-small">
+                            <FaFacebook />
+                          </span>
+                        </a>
+                        <a class="level-item">
+                          <span class="icon is-small">
+                            <MdEmail />
+                          </span>
+                        </a>
+                      </div>
                     </p>
                   </div>
                 </div>
