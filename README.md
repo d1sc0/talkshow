@@ -16,12 +16,13 @@ Another Talk Show
 - ~~move fonts to local~~ done
 - ~~Style 404 page~~ done
 - ~~Style episode posts~~ done
-- Create serverless contact form?
+- ~~Contact form~~ done
+- ~~Host on firebase and setup CD~~ done?
 - Create podcast feed and validate with services
 - update subscribe links across site
 - Twitter and facebook cards via SEO component
-- Host on firebase and setup CD done?
 
 ## Maybe things for later (Roadmap)
 
+- Improve contact form - error handling and validation
 - Creating tag or category pages?
