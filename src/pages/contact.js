@@ -47,7 +47,7 @@ const ContactPage = () => {
       <div className="section px-0">
         <form onSubmit={handleOnSubmit}>
           <div className={`field ${isHidden ? 'is-hidden' : ''}`}>
-            <label className="label" for="email">
+            <label className="label" Htmlfor="email">
               Email
             </label>
             <div className="control">
@@ -55,13 +55,15 @@ const ContactPage = () => {
                 className="input"
                 name="email"
                 type="email"
+                id="email"
                 placeholder="e.g. alexsmith@gmail.com"
                 disabled={isDisabled}
+                aria-label="email"
               />
             </div>
           </div>
           <div className={`field ${isHidden ? 'is-hidden' : ''}`}>
-            <label className="label" for="name">
+            <label className="label" Htmlfor="name">
               Name
             </label>
             <div className="control">
@@ -69,13 +71,15 @@ const ContactPage = () => {
                 className="input"
                 name="name"
                 type="text"
+                id="name"
                 placeholder="e.g Alex Smith"
                 disabled={isDisabled}
+                aria-label="name"
               />
             </div>
           </div>
           <div className={`field ${isHidden ? 'is-hidden' : ''}`}>
-            <label className="label" for="message">
+            <label className="label" Htmlfor="message">
               Message
             </label>
             <div className="control">
@@ -83,8 +87,10 @@ const ContactPage = () => {
                 className="textarea"
                 placeholder="Textarea"
                 type="text"
+                id="message"
                 name="message"
                 disabled={isDisabled}
+                aria-label="message"
               ></textarea>
             </div>
           </div>
