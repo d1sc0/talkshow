@@ -38,30 +38,18 @@ const PostHeader = ({ meta }) => {
         Posted: {episodeDate} &#x2f;&#x2f; Duration: {episodeLength}
         &#x2f;&#x2f; Size: {episodeSize}
       </p>
-      <p className="level is-mobile py-2">
-        <div className="level-left">
-          <span class="level-item">
+      <p className="py-2">
+        <div className="">
+          <span class="mr-2">
             <FaShare size="1.4rem" alt="sharing icons" />
           </span>
-          <a
-            className={`level-item ${style}`}
-            href={twitterShare}
-            alt="twitter sharing"
-          >
+          <a className={style} href={twitterShare} alt="twitter sharing">
             <FaTwitter size="1.4rem" />
           </a>
-          <a
-            className={`level-item ${style}`}
-            href={facebookShare}
-            alt="facebook sharing"
-          >
+          <a className={style} href={facebookShare} alt="facebook sharing">
             <FaFacebook size="1.4rem" />
           </a>
-          <a
-            className={`level-item ${style}`}
-            href={emailShare}
-            alt="email sharing"
-          >
+          <a className={style} href={emailShare} alt="email sharing">
             <MdEmail size="1.4rem" />
           </a>
         </div>

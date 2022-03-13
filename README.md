@@ -17,8 +17,8 @@ Another Talk Show
 - ~~Style 404 page~~ done
 - ~~Style episode posts~~ done
 - ~~Contact form~~ done
-- ~~Host on firebase and setup CD~~ done?
-- Create podcast feed and validate with services
+- ~~Host on firebase and setup CD~~ done
+- ~~Create podcast feed and validate with services~~ done
 - update subscribe links across site
 - Twitter and facebook cards via SEO component
 

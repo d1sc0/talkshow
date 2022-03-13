@@ -26,30 +26,18 @@ const MetaShare = ({ meta }) => {
   const emailShare = `mailto:?subject=Check out this podcast episode site&body=${meta.episodeTitle} - ${siteUrl}/episodes/${meta.episodeSlug}`
   return (
     <>
-      <p className="level is-mobile">
-        <div className="level-left">
-          <span class="level-item">
+      <p className="">
+        <div className="is-aligned-left">
+          <span className="mr-2">
             <FaShare size="1.4rem" alt="sharing icon" />
           </span>
-          <a
-            className={`level-item ${style}`}
-            href={twitterShare}
-            alt="twitter share"
-          >
+          <a className={style} href={twitterShare} alt="twitter share">
             <FaTwitter size="1.4rem" />
           </a>
-          <a
-            className={`level-item ${style}`}
-            href={facebookShare}
-            alt="facebook share"
-          >
+          <a className={style} href={facebookShare} alt="facebook share">
             <FaFacebook size="1.4rem" />
           </a>
-          <a
-            className={`level-item ${style}`}
-            href={emailShare}
-            alt="email share"
-          >
+          <a className={style} href={emailShare} alt="email share">
             <MdEmail size="1.4rem" />
           </a>
         </div>
