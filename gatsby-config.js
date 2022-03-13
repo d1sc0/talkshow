@@ -122,7 +122,13 @@ module.exports = {
                 },
               ],
             },
-            { 'itunes:image': 'https://anothertalk.show/ats_cover_art.png' },
+            {
+              'itunes:image': {
+                _attr: {
+                  href: 'https://anothertalk.show/ats_cover_art.png',
+                },
+              },
+            },
             {
               'itunes:owner': [
                 { 'itunes:name': 'Stuart Mackenzie' },
