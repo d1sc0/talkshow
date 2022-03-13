@@ -98,6 +98,7 @@ module.exports = {
           custom_elements: [
             { 'itunes:author': 'Stuart Mackenzie' },
             { 'itunes:explicit': 'clean' },
+            { 'itunes:summary': site.siteMetadata.description },
             {
               'itunes:category': [
                 {
