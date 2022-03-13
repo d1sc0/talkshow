@@ -90,6 +90,7 @@ module.exports = {
         `,
         setup: options => ({
           ...options,
+          generator: 'Another Talk Show',
           custom_namespaces: {
             itunes: 'http://www.itunes.com/dtds/podcast-1.0.dtd',
           },
@@ -109,14 +110,17 @@ module.exports = {
           {
             serialize: ({ query: { site, allMdx } }) => {
               return allMdx.nodes.map(node => {
-                const encContent = `url=${node.frontmatter.episodeMp3} type="audio/mpeg" length=${node.frontmatter.episodeBytes}`
                 const episodeUrl = `${node.frontmatter.episodeMp3}/episode/${node.slug}`
                 const episodeGuid = `ATS-${node.slug}`
                 return Object.assign({}, node.frontmatter, {
                   title: node.frontmatter.title,
                   description: node.frontmatter.description,
                   date: node.frontmatter.date,
-                  custom_elements: [{ enclosure: encContent }],
+                  enclosure: {
+                    url: node.frontmatter.episodeMp3,
+                    size: node.frontmatter.episodeBytes,
+                    type: 'audio/mpeg',
+                  },
                   url: episodeUrl,
                   guid: episodeGuid,
                 })
