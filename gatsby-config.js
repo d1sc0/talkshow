@@ -90,6 +90,7 @@ module.exports = {
         `,
         setup: options => ({
           ...options,
+          link: 'https://anothertalk.show/',
           generator: 'Another Talk Show',
           language: 'en',
           custom_namespaces: {
@@ -97,10 +98,10 @@ module.exports = {
           },
           custom_elements: [
             { 'itunes:author': 'Another Talk Show' },
-            { 'itunes:explicit': 'clean' },
+            { 'itunes:explicit': 'no' },
             {
               'itunes:summary':
-                "On Another Talk Show a fairly ordinary host (Stuart Mackenzie) interviews a range of interesting people who aren't famous. Although they lack fame or fortune that doesn't mean they aren't interesting, entertaining or just simply awesome.",
+                "On Another Talk Show a fairly ordinary host (Stuart Mackenzie) interviews a range of interesting guests who aren't famous. Although they lack fame or fortune that doesn't mean they aren't interesting, entertaining or just simply awesome! Tune in and follow along.",
             },
             {
               'itunes:owner': [
@@ -120,6 +121,24 @@ module.exports = {
                 {
                   _attr: {
                     text: 'Society & Culture',
+                  },
+                },
+              ],
+            },
+            {
+              'itunes:category': [
+                {
+                  _attr: {
+                    text: 'Arts',
+                  },
+                },
+              ],
+            },
+            {
+              'itunes:category': [
+                {
+                  _attr: {
+                    text: 'News & Politics',
                   },
                 },
               ],
