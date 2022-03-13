@@ -109,6 +109,7 @@ module.exports = {
                   title: node.frontmatter.title,
                   description: node.frontmatterdescription,
                   date: node.frontmatter.date,
+                  enclosure: node.frontmatter.episodeMp3,
                   url: site.siteMetadata.siteUrl + '/episode/' + node.slug,
                   guid: 'ATS-' + node.slug,
                 })
