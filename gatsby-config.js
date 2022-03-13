@@ -96,7 +96,7 @@ module.exports = {
             itunes: 'http://www.itunes.com/dtds/podcast-1.0.dtd',
           },
           custom_elements: [
-            { 'itunes:author': 'Stuart Mackenzie' },
+            { 'itunes:author': 'Another Talk Show' },
             { 'itunes:explicit': 'clean' },
             { 'itunes:summary': site.siteMetadata.description },
             {
@@ -154,6 +154,11 @@ module.exports = {
                   },
                   url: episodeUrl,
                   guid: episodeGuid,
+                  custom_elements: [
+                    { 'itunes:summary': node.frontmatter.description },
+                    { 'itunes:duration': node.frontmatter.episodeSeconds },
+                    { 'itunes:author': 'Another Talk Show' },
+                  ],
                 })
               })
             },
