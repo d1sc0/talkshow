@@ -164,7 +164,7 @@ module.exports = {
                   url: episodeUrl,
                   guid: episodeGuid,
                   custom_elements: [
-                    { 'itunes:title': node.title },
+                    { 'itunes:title': node.frontmatter.title },
                     { 'itunes:summary': node.frontmatter.description },
                     { 'itunes:episode': node.frontmatter.episodeNumber },
                     { 'itunes:duration': node.frontmatter.episodeSeconds },
