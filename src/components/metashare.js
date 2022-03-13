@@ -21,9 +21,9 @@ const MetaShare = ({ meta }) => {
   const episodeDate = meta.episodeDate
   const episodeSize = EpisodeSizer(meta.episodeBytes, 2)
   const episodeLength = EpisodeDuration(meta.episodeSeconds)
-  const facebookShare = `http://www.facebook.com/sharer.php?u=${siteUrl}/episodes/${meta.episodeSlug}`
-  const twitterShare = `https://twitter.com/intent/tweet?text=${meta.episodeTitle} - ${siteUrl}/episodes/${meta.episodeSlug}`
-  const emailShare = `mailto:?subject=Check out this podcast episode site&body=${meta.episodeTitle} - ${siteUrl}/episodes/${meta.episodeSlug}`
+  const facebookShare = `http://www.facebook.com/sharer.php?u=${siteUrl}/episodes/${meta.episodeSlug}/`
+  const twitterShare = `https://twitter.com/intent/tweet?text=${meta.episodeTitle} - ${siteUrl}/episodes/${meta.episodeSlug}/`
+  const emailShare = `mailto:?subject=Check out this podcast episode site&body=${meta.episodeTitle} - ${siteUrl}/episodes/${meta.episodeSlug}/`
   return (
     <>
       <p className="">
