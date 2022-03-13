@@ -97,6 +97,12 @@ module.exports = {
             { 'itunes:author': 'Stuart Mackenzie' },
             { 'itunes:explicit': 'clean' },
             { 'itunes:image': 'https://anothertalk.show/ats_cover_art.png' },
+            {
+              'itunes:owner': [
+                { 'itunes:name': 'Stuart Mackenzie' },
+                { 'itunes:email': 'mail@hellostu.xyz' },
+              ],
+            },
           ],
         }),
         feeds: [
@@ -107,7 +113,7 @@ module.exports = {
                   title: node.frontmatter.title,
                   description: node.frontmatterdescription,
                   date: node.frontmatter.date,
-                  enclosure: node.frontmatter.episodeMp3,
+                  custom_elements: [{ enclosure: node.frontmatter.episodeMp3 }],
                   url: site.siteMetadata.siteUrl + '/episode/' + node.slug,
                   guid: 'ATS-' + node.slug,
                 })
