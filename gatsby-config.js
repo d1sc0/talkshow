@@ -92,6 +92,8 @@ module.exports = {
           ...options,
           feed_url: 'https://anothertalk.show/podcast.xml',
           site_url: 'https://anothertalk.show/',
+          description:
+            'The podcast RSS feed of the one of the best talk shows on the internet!',
           generator: 'Another Talk Show',
           copyright: 'Copyright 2019-2022 Stuart Mackenzie',
           language: 'en',
