@@ -155,6 +155,7 @@ module.exports = {
                   url: episodeUrl,
                   guid: episodeGuid,
                   custom_elements: [
+                    { 'itunes:title': node.title },
                     { 'itunes:summary': node.frontmatter.description },
                     { 'itunes:duration': node.frontmatter.episodeSeconds },
                     { 'itunes:author': 'Another Talk Show' },
