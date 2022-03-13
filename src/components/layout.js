@@ -89,7 +89,7 @@ const Layout = ({ children }) => {
             <SiGooglepodcasts size="1.9rem" />
           </a>
 
-          <a href="https://open.spotify.com/show/2Wf8butZI229NlRVPQHU6z">
+          <a href="https://open.spotify.com/show/4KBoGQIiwmO4ZEE6rdNSGh">
             <FaSpotify size="1.9rem" />
           </a>
         </p>
