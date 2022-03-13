@@ -97,25 +97,14 @@ module.exports = {
           },
           custom_elements: [
             { 'itunes:author': 'Another Talk Show' },
-            { 'itunes:explicit': 'clean' },
-            { 'itunes:summary': site.siteMetadata.description },
             {
-              'itunes:category': [
-                {
-                  _attr: {
-                    text: 'Society & Culture',
-                  },
-                },
-                {
-                  _attr: {
-                    text: 'Lesuire',
-                  },
-                },
-                {
-                  _attr: {
-                    text: 'Arts',
-                  },
-                },
+              'itunes:summary':
+                "On Another Talk Show a fairly ordinary host (Stuart Mackenzie) interviews a range of interesting people who aren't famous. Although they lack fame or fortune that doesn't mean they aren't interesting, entertaining or just simply awesome.",
+            },
+            {
+              'itunes:owner': [
+                { 'itunes:name': 'Stuart Mackenzie' },
+                { 'itunes:email': 'mail@hellostu.xyz' },
               ],
             },
             {
@@ -126,9 +115,12 @@ module.exports = {
               },
             },
             {
-              'itunes:owner': [
-                { 'itunes:name': 'Stuart Mackenzie' },
-                { 'itunes:email': 'mail@hellostu.xyz' },
+              'itunes:category': [
+                {
+                  _attr: {
+                    text: 'Society &amp; Culture',
+                  },
+                },
               ],
             },
           ],
