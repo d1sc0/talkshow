@@ -91,6 +91,7 @@ module.exports = {
         setup: options => ({
           ...options,
           generator: 'Another Talk Show',
+          language: 'en',
           custom_namespaces: {
             itunes: 'http://www.itunes.com/dtds/podcast-1.0.dtd',
           },
