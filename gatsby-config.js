@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     siteTitle: `Another Talk Show`,
-    description: `On Another Talk Show a fairly ordinary host (Stuart Mackenzie) interviews a range of interesting people who aren't famous. Although they lack fame or fortune that doesn't mean they aren't interesting, entertaining or just simply awesome.`,
+    description: `This is Another Talk Show where a fairly ordinary host (Stuart Mackenzie) interviews a range of interesting people who aren't famous. Although they lack fame or fortune that doesn't mean they don't have interesting, entertaining or just simply awesome things to share.`,
     siteUrl: `https://anothertalk.show`,
     social: {
       twitter: `_ordinaryhost`,
@@ -105,7 +105,7 @@ module.exports = {
           feed_url: 'https://anothertalk.show/podcast.xml',
           site_url: 'https://anothertalk.show/',
           description:
-            "On Another Talk Show a fairly ordinary host (Stuart Mackenzie) interviews a range of interesting guests who aren&apos;t famous. Although they lack fame or fortune that doesn&apos;t mean they aren't interesting, entertaining or just simply awesome! Tune in and follow along.",
+            "This is Another Talk Show where a fairly ordinary host (Stuart Mackenzie) interviews a range of interesting people who aren't famous. Although they lack fame or fortune that doesn't mean they don't have interesting, entertaining or just simply awesome things to share.",
           generator: 'Another Talk Show',
           copyright: 'Copyright 2019-2022 Stuart Mackenzie',
           language: 'en',
@@ -117,7 +117,7 @@ module.exports = {
             { 'itunes:explicit': 'false' },
             {
               'itunes:summary':
-                "On Another Talk Show a fairly ordinary host (Stuart Mackenzie) interviews a range of interesting guests who aren't famous. Although they lack fame or fortune that doesn&apos;t mean they aren't interesting, entertaining or just simply awesome! Tune in and follow along.",
+                "This is Another Talk Show where a fairly ordinary host (Stuart Mackenzie) interviews a range of interesting people who aren't famous. Although they lack fame or fortune that doesn't mean they don't have interesting, entertaining or just simply awesome things to share.",
             },
             {
               'itunes:owner': [
@@ -136,7 +136,7 @@ module.exports = {
               'itunes:category': [
                 {
                   _attr: {
-                    text: 'Society &amp; Culture',
+                    text: 'Society & Culture',
                   },
                 },
               ],
@@ -154,7 +154,7 @@ module.exports = {
               'itunes:category': [
                 {
                   _attr: {
-                    text: 'News &amp; Politics',
+                    text: 'News & Politics',
                   },
                 },
               ],
@@ -194,7 +194,6 @@ module.exports = {
                 nodes {
                   slug
                   id
-                  excerpt(pruneLength: 480)
                   frontmatter {
                     date(formatString: "DD MMM YYYY")
                     title
@@ -221,7 +220,6 @@ module.exports = {
         short_name: `AnotherTalkShow`,
         start_url: `/`,
         background_color: `#ffffff`,
-        // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
