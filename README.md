@@ -19,8 +19,8 @@ Another Talk Show
 - ~~Contact form~~ done
 - ~~Host on firebase and setup CD~~ done
 - ~~Create podcast feed and validate with services~~ done
-- ~~update subscribe links across site~~ just waiting on apple, google to update (spotify done - new link added)
-- Twitter and facebook cards via SEO component
+- ~~update subscribe links across site~~ just waiting on google to update (spotify and apple done - any link changes made)
+- Twitter and facebook cards via SEO component - done
 
 - Create episode 1
 
