@@ -55,6 +55,10 @@ const Seo = ({ description, lang, meta, title }) => {
           content: `website`,
         },
         {
+          property: `og:image`,
+          content: 'https://anothertalk.show/ats_small.png',
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
@@ -69,6 +73,10 @@ const Seo = ({ description, lang, meta, title }) => {
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          name: `twitter:image`,
+          content: 'https://anothertalk.show/ats_small.png',
         },
       ].concat(meta)}
     />
