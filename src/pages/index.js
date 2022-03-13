@@ -90,7 +90,7 @@ const HomePage = ({ data }) => {
       </div>
       <div className="columns mb-0">
         <div className="column">
-          <a href="https://google.com">
+          <a href="https://podcasts.apple.com/gb/podcast/another-talk-show/id1551385867">
             <button className="button is-black is-medium is-fullwidth has-text-weight-semibold">
               <span className="icon">
                 <FaPodcast />
@@ -100,7 +100,7 @@ const HomePage = ({ data }) => {
           </a>
         </div>
         <div className="column">
-          <a href="https://google.com">
+          <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbm90aGVydGFsay5zaG93L3BvZGNhc3QtcnNzLWZlZWQueG1s">
             <button className="button is-black is-medium is-fullwidth has-text-weight-semibold">
               <span className="icon">
                 <SiGooglepodcasts />
@@ -110,7 +110,7 @@ const HomePage = ({ data }) => {
           </a>
         </div>
         <div className="column">
-          <a href="https://google.com">
+          <a href="https://open.spotify.com/show/2Wf8butZI229NlRVPQHU6z">
             <button className="button is-black is-medium is-fullwidth has-text-weight-semibold">
               <span className="icon">
                 <FaSpotify />
