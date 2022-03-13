@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     siteTitle: `Another Talk Show`,
-    description: `A podcast where a fairly ordinary host interviews interesting people who aren't famous.`,
+    description: `On Another Talk Show a fairly ordinary host (Stuart Mackenzie) interviews a range of interesting people who aren't famous. Although they lack fame or fortune that doesn't mean they aren't interesting, entertaining or just simply awesome.`,
     siteUrl: `https://anothertalk.show`,
     social: {
       twitter: `_ordianryhost`,
@@ -98,6 +98,29 @@ module.exports = {
           custom_elements: [
             { 'itunes:author': 'Stuart Mackenzie' },
             { 'itunes:explicit': 'clean' },
+            {
+              'itunes:category': [
+                {
+                  _attr: {
+                    text: 'Society & Culture',
+                  },
+                },
+                {
+                  'itunes:category': {
+                    _attr: {
+                      text: 'Lesuire',
+                    },
+                  },
+                },
+                {
+                  'itunes:category': {
+                    _attr: {
+                      text: 'Arts',
+                    },
+                  },
+                },
+              ],
+            },
             { 'itunes:image': 'https://anothertalk.show/ats_cover_art.png' },
             {
               'itunes:owner': [
