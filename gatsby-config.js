@@ -109,13 +109,16 @@ module.exports = {
           {
             serialize: ({ query: { site, allMdx } }) => {
               return allMdx.nodes.map(node => {
+                const encContent = `url=${node.frontmatter.episodeMp3} type="audio/mpeg" length=${node.frontmatter.episodeBytes}`
+                const episodeUrl = `${node.frontmatter.episodeMp3}/episode/${node.slug}`
+                const episodeGuid = `ATS-${node.slug}`
                 return Object.assign({}, node.frontmatter, {
                   title: node.frontmatter.title,
                   description: node.frontmatterdescription,
                   date: node.frontmatter.date,
-                  custom_elements: [{ enclosure: node.frontmatter.episodeMp3 }],
-                  url: site.siteMetadata.siteUrl + '/episode/' + node.slug,
-                  guid: 'ATS-' + node.slug,
+                  custom_elements: [{ enclosure: encContent }],
+                  url: episodeUrl,
+                  guid: episodeGuid,
                 })
               })
             },
