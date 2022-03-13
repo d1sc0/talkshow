@@ -93,7 +93,7 @@ module.exports = {
           feed_url: 'https://anothertalk.show/podcast.xml',
           site_url: 'https://anothertalk.show/',
           description:
-            'The podcast RSS feed of the one of the best talk shows on the internet!',
+            "On Another Talk Show a fairly ordinary host (Stuart Mackenzie) interviews a range of interesting guests who aren&apos;t famous. Although they lack fame or fortune that doesn&apos;t mean they aren't interesting, entertaining or just simply awesome! Tune in and follow along.",
           generator: 'Another Talk Show',
           copyright: 'Copyright 2019-2022 Stuart Mackenzie',
           language: 'en',
