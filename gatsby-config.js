@@ -97,6 +97,7 @@ module.exports = {
           },
           custom_elements: [
             { 'itunes:author': 'Another Talk Show' },
+            { 'itunes:explicit': 'clean' },
             {
               'itunes:summary':
                 "On Another Talk Show a fairly ordinary host (Stuart Mackenzie) interviews a range of interesting people who aren't famous. Although they lack fame or fortune that doesn't mean they aren't interesting, entertaining or just simply awesome.",
@@ -118,7 +119,7 @@ module.exports = {
               'itunes:category': [
                 {
                   _attr: {
-                    text: 'Society &amp; Culture',
+                    text: 'Society & Culture',
                   },
                 },
               ],
