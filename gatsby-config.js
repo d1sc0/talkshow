@@ -79,22 +79,37 @@ module.exports = {
       resolve: `gatsby-plugin-feed`,
       options: {
         query: `
-              {
-                site {
-                  siteMetadata {
-                    title
-                    description
-                    siteUrl
-                  }
-                }
+          {
+            site {
+              siteMetadata {
+                title
+                author
+                description
+                siteUrl
               }
+            }
+          }
         `,
-        query: `
+        feeds: [
+          {
+            serialize: ({ query: { site, allMdx } }) => {
+              return allMdx.nodes.map(node => {
+                return Object.assign({}, node.frontmatter, {
+                  title: node.frontmatter.title,
+                  description: node.frontmatterdescription,
+                  date: node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + '/episode/' + node.slug,
+                  guid: 'ATS-' + node.slug,
+                })
+              })
+            },
+            query: `
             {
               allMdx(sort: { order: DESC, fields: frontmatter___date }) {
                 nodes {
                   slug
                   id
+                  excerpt(pruneLength: 480)
                   frontmatter {
                     date(formatString: "DD MMM YYYY")
                     title
@@ -108,21 +123,8 @@ module.exports = {
               }
             }
             `,
-        feeds: [
-          {
-            serialize: ({ query: { site, allMdx } }) => {
-              return allMdx.nodes.map(node => {
-                return Object.assign({}, node.frontmatter, {
-                  title: node.frontmatter.title,
-                  description: node.excerpt,
-                  date: node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + '/posts/' + node.slug,
-                  guid: 'ATS-' + node.slug,
-                })
-              })
-            },
             output: '/podcast.xml',
-            title: 'Another Talk Show RSS',
+            title: 'Another Talk Show',
           },
         ],
       },
