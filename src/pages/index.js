@@ -122,7 +122,7 @@ const HomePage = ({ data }) => {
       </div>
       <div className="section p-0 has-text-centered">
         <p className="is-size-5">
-          <Link to="/rss.xml" className="has-text-weight-semibold">
+          <Link to="/podcast.xml" className="has-text-weight-semibold">
             RSS Feed
           </Link>
         </p>

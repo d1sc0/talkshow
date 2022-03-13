@@ -3,6 +3,7 @@ module.exports = {
     siteTitle: `Another Talk Show`,
     description: `A podcast where a fairly ordinary host interviews interesting people who aren't famous.`,
     siteUrl: `https://anothertalk.show`,
+    author: `Stuart Mackenzie`,
     social: {
       twitter: `_ordianryhost`,
     },
@@ -78,17 +79,35 @@ module.exports = {
       resolve: `gatsby-plugin-feed`,
       options: {
         query: `
-          {
-            site {
-              siteMetadata {
-                title
-                description
-                siteUrl
-                site_url: siteUrl
+              {
+                site {
+                  siteMetadata {
+                    title
+                    description
+                    siteUrl
+                  }
+                }
+              }
+        `,
+        query: `
+            {
+              allMdx(sort: { order: DESC, fields: frontmatter___date }) {
+                nodes {
+                  slug
+                  id
+                  frontmatter {
+                    date(formatString: "DD MMM YYYY")
+                    title
+                    description
+                    episodeMp3
+                    episodeBytes
+                    episodeSeconds
+                    episodeNumber
+                  }
+                }
               }
             }
-          }
-        `,
+            `,
         feeds: [
           {
             serialize: ({ query: { site, allMdx } }) => {
@@ -98,27 +117,11 @@ module.exports = {
                   description: node.excerpt,
                   date: node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + '/posts/' + node.slug,
-                  guid: site.siteMetadata.siteUrl + '/posts/' + node.slug,
+                  guid: 'ATS-' + node.slug,
                 })
               })
             },
-            query: `
-            {
-              allMdx(sort: { order: DESC, fields: frontmatter___date }) {
-                nodes {
-                  slug
-                  id
-                  excerpt(pruneLength: 480)
-                  frontmatter {
-                    date(formatString: "DD MMM YYYY")
-                    title
-                    description
-                  }
-                }
-              }
-            }
-            `,
-            output: '/rss.xml',
+            output: '/podcast.xml',
             title: 'Another Talk Show RSS',
           },
         ],
