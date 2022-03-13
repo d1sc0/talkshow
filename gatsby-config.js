@@ -114,7 +114,7 @@ module.exports = {
                 const episodeGuid = `ATS-${node.slug}`
                 return Object.assign({}, node.frontmatter, {
                   title: node.frontmatter.title,
-                  description: node.frontmatterdescription,
+                  description: node.frontmatter.description,
                   date: node.frontmatter.date,
                   custom_elements: [{ enclosure: encContent }],
                   url: episodeUrl,
