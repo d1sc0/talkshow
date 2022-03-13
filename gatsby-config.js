@@ -90,7 +90,8 @@ module.exports = {
         `,
         setup: options => ({
           ...options,
-          link: 'https://anothertalk.show/',
+          feed_url: 'https://anothertalk.show/podcast.xml',
+          site_url: 'https://anothertalk.show/',
           generator: 'Another Talk Show',
           copyright: 'Copyright 2019-2022 Stuart Mackenzie',
           language: 'en',
