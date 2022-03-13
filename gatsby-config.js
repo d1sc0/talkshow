@@ -107,17 +107,13 @@ module.exports = {
                   },
                 },
                 {
-                  'itunes:category': {
-                    _attr: {
-                      text: 'Lesuire',
-                    },
+                  _attr: {
+                    text: 'Lesuire',
                   },
                 },
                 {
-                  'itunes:category': {
-                    _attr: {
-                      text: 'Arts',
-                    },
+                  _attr: {
+                    text: 'Arts',
                   },
                 },
               ],
