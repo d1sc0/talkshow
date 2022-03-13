@@ -3,8 +3,6 @@ module.exports = {
     siteTitle: `Another Talk Show`,
     description: `A podcast where a fairly ordinary host interviews interesting people who aren't famous.`,
     siteUrl: `https://anothertalk.show`,
-    albumArt: `https://anothertalk.show/ats_cover_art.png`,
-    author: `Stuart Mackenzie`,
     social: {
       twitter: `_ordianryhost`,
     },
@@ -84,7 +82,6 @@ module.exports = {
             site {
               siteMetadata {
                 title
-                author
                 description
                 siteUrl
               }
@@ -97,8 +94,9 @@ module.exports = {
             itunes: 'http://www.itunes.com/dtds/podcast-1.0.dtd',
           },
           custom_elements: [
-            { 'itunes:author': site.siteMetadata.author },
+            { 'itunes:author': 'Stuart Mackenzie' },
             { 'itunes:explicit': 'clean' },
+            { 'itunes:image': 'https://anothertalk.show/ats_cover_art.png' },
           ],
         }),
         feeds: [
