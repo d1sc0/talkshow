@@ -17,7 +17,7 @@ const HomePage = ({ data }) => {
     episodeTitle: episodeTitle,
     episodeSlug: latestPost.slug,
     episodeDate: latestPost.frontmatter.date,
-    metaStlye: 'has-text-white mr-3',
+    metaStlye: 'has-text-white mr-4',
   }
   return (
     <Layout>

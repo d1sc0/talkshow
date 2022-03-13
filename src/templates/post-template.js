@@ -16,7 +16,7 @@ const PostTemplate = ({ data }) => {
     episodeSlug: post.slug,
     episodeDate: post.frontmatter.date,
     episodeMp3: post.frontmatter.episodeMp3,
-    metaStlye: 'mr-3',
+    metaStlye: 'mr-4',
   }
   const { previous, next } = data
   return (

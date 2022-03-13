@@ -40,17 +40,17 @@ const PostHeader = ({ meta }) => {
       </p>
       <p className="py-2">
         <div className="">
-          <span class="mr-2">
+          <span class="mr-4">
             <FaShare size="1.4rem" alt="sharing icons" />
           </span>
-          <a className={style} href={twitterShare}>
-            <FaTwitter size="1.4rem" alt="twitter sharing" />
+          <a className={style} href={twitterShare} title="share on twitter">
+            <FaTwitter size="1.4rem" />
           </a>
-          <a className={style} href={facebookShare}>
-            <FaFacebook size="1.4rem" alt="facebook sharing" />
+          <a className={style} href={facebookShare} title="share on facebook">
+            <FaFacebook size="1.4rem" />
           </a>
-          <a className={style} href={emailShare}>
-            <MdEmail size="1.4rem" alt="email sharing" />
+          <a className={style} href={emailShare} title="share via email">
+            <MdEmail size="1.4rem" />
           </a>
         </div>
       </p>

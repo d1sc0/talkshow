@@ -28,17 +28,17 @@ const MetaShare = ({ meta }) => {
     <>
       <p className="">
         <div className="is-aligned-left">
-          <span className="mr-3">
-            <FaShare size="1.4rem" alt="sharing icon" />
+          <span className="mr-4" title="sharing icon">
+            <FaShare size="1.4rem" />
           </span>
-          <a className={style} href={twitterShare}>
-            <FaTwitter size="1.4rem" alt="twitter share" />
+          <a className={style} href={twitterShare} title="share on twitter">
+            <FaTwitter size="1.4rem" />
           </a>
-          <a className={style} href={facebookShare}>
-            <FaFacebook size="1.4rem" alt="facebook share" />
+          <a className={style} href={facebookShare} title="share on facebook">
+            <FaFacebook size="1.4rem" />
           </a>
-          <a className={style} href={emailShare}>
-            <MdEmail size="1.4rem" alt="email share" />
+          <a className={style} href={emailShare} title="share via email">
+            <MdEmail size="1.4rem" />
           </a>
         </div>
       </p>
