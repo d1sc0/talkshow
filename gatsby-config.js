@@ -153,7 +153,7 @@ module.exports = {
           {
             serialize: ({ query: { site, allMdx } }) => {
               return allMdx.nodes.map(node => {
-                const episodeUrl = `${site.siteMetadata.siteUrl}/episode/${node.slug}`
+                const episodeUrl = `${site.siteMetadata.siteUrl}/episodes/${node.slug}`
                 const episodeGuid = `ATS-${node.slug}`
                 return Object.assign({}, node.frontmatter, {
                   title: node.frontmatter.title,
