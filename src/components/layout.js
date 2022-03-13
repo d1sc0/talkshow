@@ -77,20 +77,20 @@ const Layout = ({ children }) => {
       <footer className="footer has-background-white pb-3">
         <p className="has-text-centered py-1 ficons">
           <a href="https://twitter.com/ordinaryhost">
-            <FaTwitter size="1.9rem" />
+            <FaTwitter size="1.9rem" alt="twitter" />
           </a>
           <a href="https://www.instagram.com/anothertalk.show/">
-            <FaInstagram size="1.9rem" />
+            <FaInstagram size="1.9rem" alt="instagram" />
           </a>
           <a href="https://podcasts.apple.com/gb/podcast/another-talk-show/id1551385867">
-            <FaPodcast size="1.9rem" />
+            <FaPodcast size="1.9rem" alt="apple podcasts" />
           </a>
           <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbm90aGVydGFsay5zaG93L3BvZGNhc3QtcnNzLWZlZWQueG1s">
-            <SiGooglepodcasts size="1.9rem" />
+            <SiGooglepodcasts size="1.9rem" alt="google podcasts" />
           </a>
 
           <a href="https://open.spotify.com/show/4KBoGQIiwmO4ZEE6rdNSGh">
-            <FaSpotify size="1.9rem" />
+            <FaSpotify size="1.9rem" alt="spotify podcasts" />
           </a>
         </p>
         <p className="has-text-centered py-1">

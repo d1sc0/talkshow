@@ -28,7 +28,7 @@ const PostList = ({ data, pageContext }) => {
           episodeTitle: episodeTitle,
           episodeSlug: post.slug,
           episodeDate: post.frontmatter.date,
-          metaStlye: 'mr-2',
+          metaStlye: 'mr-3',
         }
         return (
           <>
