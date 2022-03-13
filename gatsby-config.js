@@ -92,16 +92,17 @@ module.exports = {
           ...options,
           link: 'https://anothertalk.show/',
           generator: 'Another Talk Show',
+          copyright: 'Copyright 2019-2022 Stuart Mackenzie',
           language: 'en',
           custom_namespaces: {
             itunes: 'http://www.itunes.com/dtds/podcast-1.0.dtd',
           },
           custom_elements: [
             { 'itunes:author': 'Another Talk Show' },
-            { 'itunes:explicit': 'no' },
+            { 'itunes:explicit': 'false' },
             {
               'itunes:summary':
-                "On Another Talk Show a fairly ordinary host (Stuart Mackenzie) interviews a range of interesting guests who aren't famous. Although they lack fame or fortune that doesn't mean they aren't interesting, entertaining or just simply awesome! Tune in and follow along.",
+                "On Another Talk Show a fairly ordinary host (Stuart Mackenzie) interviews a range of interesting guests who aren't famous. Although they lack fame or fortune that doesn&apos;t mean they aren't interesting, entertaining or just simply awesome! Tune in and follow along.",
             },
             {
               'itunes:owner': [
@@ -120,7 +121,7 @@ module.exports = {
               'itunes:category': [
                 {
                   _attr: {
-                    text: 'Society & Culture',
+                    text: 'Society &amp; Culture',
                   },
                 },
               ],
@@ -138,7 +139,7 @@ module.exports = {
               'itunes:category': [
                 {
                   _attr: {
-                    text: 'News & Politics',
+                    text: 'News &amp; Politics',
                   },
                 },
               ],
@@ -165,6 +166,7 @@ module.exports = {
                   custom_elements: [
                     { 'itunes:title': node.title },
                     { 'itunes:summary': node.frontmatter.description },
+                    { 'itunes:episode': node.frontmatter.episodeNumber },
                     { 'itunes:duration': node.frontmatter.episodeSeconds },
                     { 'itunes:author': 'Another Talk Show' },
                   ],
