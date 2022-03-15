@@ -21,11 +21,12 @@ Another Talk Show
 - ~~Create podcast feed and validate with services~~ done
 - ~~update subscribe links across site~~ just waiting on google to update (spotify and apple done - any link changes made)
 - ~~Twitter and facebook cards via SEO component~~ - done
-- Go through and tidy up styles sheet. Selectively import bulma features based on use.
 
+- privacy notice for analytics?
 - Create episode 1
 
 ## Maybe things for later (Roadmap)
 
+- Go through and tidy up styles sheet. Selectively import bulma features based on use.
 - Improve contact form - error handling and validation
-- Creating tag or category pages?
+- Creating tag or category pages? (port from update template (needs template changes and gatsby-node amends))
