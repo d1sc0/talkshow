@@ -8,7 +8,7 @@ import '../styles.scss'
 const ContactPage = () => {
   const [isHidden, setisHidden] = useState(false)
   const [isDisabled, setisDisabled] = useState(false)
-  const [serverState, setServerState] = useState({
+  const [, setServerState] = useState({
     submitting: false,
     status: null,
   })
