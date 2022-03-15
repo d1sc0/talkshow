@@ -39,7 +39,6 @@ const ContactPage = () => {
         handleServerResponse(false, r.response.data, form)
       })
   }
-  console.log(serverState)
   return (
     <Layout>
       <Seo description="How to get in touch with us" title="Contact" />
