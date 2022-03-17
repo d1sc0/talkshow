@@ -202,6 +202,12 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-panelbear`,
+      options: {
+        siteID: 'CpkZWeIf3ez',
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Another Talk Show`,
