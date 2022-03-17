@@ -21,7 +21,7 @@ Another Talk Show
 - ~~Create podcast feed and validate with services~~ done
 - ~~update subscribe links across site~~ just waiting on google to update (spotify and apple done - any link changes made)
 - ~~Twitter and facebook cards via SEO component~~ - done
-
+- ~~hook up panelbear some simple analytics
 - privacy notice for analytics?
 - Create episode 1
 
