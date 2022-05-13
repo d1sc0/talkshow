@@ -50,7 +50,7 @@ const AboutPage = () => {
         <p>
           <StaticImage
             alt="Stuart Mackenzie - host, producer, researcher, marketing manager and web developer"
-            src="../images/page-images/hello-stu.jpg"
+            src="../images/page-images/stuart-mackenzie.jpg"
             width={460}
             height={460}
             className="is-pulled-right mx-4 mb-4 rounded-corners"
