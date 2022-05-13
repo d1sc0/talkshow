@@ -100,7 +100,7 @@ const HomePage = ({ data }) => {
           </a>
         </div>
         <div className="column">
-          <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbm90aGVydGFsay5zaG93L3BvZGNhc3QtcnNzLWZlZWQueG1s">
+          <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbm90aGVydGFsay5zaG93L3BvZGNhc3QueG1s">
             <button className="button is-black is-medium is-fullwidth has-text-weight-semibold">
               <span className="icon">
                 <SiGooglepodcasts />

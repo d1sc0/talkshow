@@ -92,7 +92,7 @@ const Layout = ({ children }) => {
             <FaPodcast size="1.9rem" />
           </a>
           <a
-            href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbm90aGVydGFsay5zaG93L3BvZGNhc3QtcnNzLWZlZWQueG1s"
+            href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbm90aGVydGFsay5zaG93L3BvZGNhc3QueG1s"
             title="find us on google podcasts"
           >
             <SiGooglepodcasts size="1.9rem" />
