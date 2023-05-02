@@ -27,15 +27,15 @@
     "gatsby-source-filesystem": "^4.19.0",
     "gatsby-transformer-remark": "^5.19.0",
     "gatsby-transformer-sharp": "^4.19.0",
-    "prismjs": "^1.28.0",
+    "prismjs": "^1.29.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
-    "react-icons": "^4.4.0",
-    "sass": "^1.54.0"
+    "react-icons": "^4.8.0",
+    "sass": "^1.62.1"
   },
   "devDependencies": {
-    "prettier": "^2.7.1"
+    "prettier": "^2.8.8"
   },
   "license": "0BSD",
   "scripts": {
