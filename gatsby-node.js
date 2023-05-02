@@ -10,16 +10,21 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // Get all markdown blog posts sorted by date
   const result = await graphql(
     `
-      query {
-        allMdx(sort: { order: DESC, fields: frontmatter___date }) {
+      {
+        allMdx(sort: { frontmatter: { date: DESC } }) {
           nodes {
-            slug
             id
             excerpt
             frontmatter {
               date(formatString: "DD MMM YYYY")
               title
               description
+            }
+            fields {
+              slug
+            }
+            internal {
+              contentFilePath
             }
           }
         }
@@ -36,9 +41,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   const posts = result.data.allMdx.nodes
+  const postsPerPage = 5
 
   // Create blog-list pages
-  const postsPerPage = 4
   const numPages = Math.ceil(posts.length / postsPerPage)
   Array.from({ length: numPages }).forEach((_, i) => {
     createPage({
@@ -54,15 +59,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   })
 
   // Create blog posts
-
   if (posts.length > 0) {
     posts.forEach((post, index) => {
       const previousPostId = index === 0 ? null : posts[index - 1].id
       const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
 
       createPage({
-        path: `episodes/${post.slug}`,
-        component: postTemplate,
+        path: `episodes${post.fields.slug}`,
+        // component: postTemplate,
+        component: `${postTemplate}?__contentFilePath=${post.internal.contentFilePath}`,
         context: {
           id: post.id,
           previousPostId,
@@ -76,7 +81,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
-  if (node.internal.type === `mdx`) {
+  if (node.internal.type === `Mdx`) {
     const value = createFilePath({ node, getNode })
 
     createNodeField({
@@ -85,6 +90,20 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       value,
     })
   }
+}
+
+// specifiy type for troublesome custom field should probably do the same for -  postImage: [File] @fileByRelativePath
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+  const typeDefs = `
+    type Mdx implements Node {
+      frontmatter: MdxFrontmatter
+    }
+    type MdxFrontmatter {
+      socialImage: File @fileByRelativePath
+    }
+  `
+  createTypes(typeDefs)
 }
 
 /* exports.createSchemaCustomization = ({ actions }) => {

@@ -15,7 +15,7 @@ const HomePage = ({ data }) => {
     episodeSeconds: latestPost.frontmatter.episodeSeconds,
     episodeBytes: latestPost.frontmatter.episodeBytes,
     episodeTitle: episodeTitle,
-    episodeSlug: latestPost.slug,
+    episodeSlug: latestPost.fields.slug,
     episodeDate: latestPost.frontmatter.date,
     metaStlye: 'has-text-white mr-4',
   }
@@ -52,7 +52,7 @@ const HomePage = ({ data }) => {
             LATEST EPISODE
             <h2 className="is-size-3 is-size-4-touch has-text-weight-semibold py-2">
               <Link
-                to={`/episodes/${latestPost.slug}`}
+                to={`/episodes${latestPost.fields.slug}`}
                 className="has-text-white"
               >
                 {episodeTitle}
@@ -135,10 +135,12 @@ export default HomePage
 
 export const pageQuery = graphql`
   query latestPost {
-    allMdx(sort: { order: DESC, fields: frontmatter___date }, limit: 1) {
+    allMdx(sort: { frontmatter: { date: DESC } }, limit: 1) {
       nodes {
-        slug
         id
+        fields {
+          slug
+        }
         frontmatter {
           title
           date(formatString: "DD MMM YYYY")

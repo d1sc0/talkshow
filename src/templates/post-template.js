@@ -1,19 +1,21 @@
 import * as React from 'react'
 import { Link, graphql } from 'gatsby'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
+//import { MDXRenderer } from 'gatsby-plugin-mdx'
 import PostHeader from '../components/postheader'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
+import { getSrc } from 'gatsby-plugin-image'
 import '../styles.scss'
 
-const PostTemplate = ({ data }) => {
+const PostTemplate = ({ data, children }) => {
   const post = data.mdx
+  const socialImg = getSrc(post.frontmatter.socialImage)
   const episodeTitle = `Episode ${post.frontmatter.episodeNumber}: ${post.frontmatter.title}`
   const postMeta = {
     episodeSeconds: post.frontmatter.episodeSeconds,
     episodeBytes: post.frontmatter.episodeBytes,
     episodeTitle: episodeTitle,
-    episodeSlug: post.slug,
+    episodeSlug: post.fields.slug,
     episodeDate: post.frontmatter.date,
     episodeMp3: post.frontmatter.episodeMp3,
     metaStlye: 'mr-4',
@@ -24,11 +26,13 @@ const PostTemplate = ({ data }) => {
       <Seo
         title={episodeTitle}
         description={post.frontmatter.description || post.excerpt}
+        imageUrl={socialImg}
       />
       <h1 className="title is-size-2">{episodeTitle}</h1>
       <PostHeader meta={postMeta} />
       <div className="content mt-4">
-        <MDXRenderer frontmatter={post.frontmatter}>{post.body}</MDXRenderer>
+        {/* <MDXRenderer frontmatter={post.frontmatter}>{post.body}</MDXRenderer> */}
+        {children}
       </div>
 
       <nav
@@ -42,7 +46,7 @@ const PostTemplate = ({ data }) => {
           </h4>
           {previous && (
             <Link
-              to={`/episodes/${previous.slug}`}
+              to={`/episodes${previous.fields.slug}`}
               className="pagination-previous"
               rel="prev"
             >
@@ -52,7 +56,7 @@ const PostTemplate = ({ data }) => {
           )}
           {next && (
             <Link
-              to={`/episodes/${next.slug}`}
+              to={`/episodes${next.fields.slug}`}
               className="pagination-next"
               rel="next"
             >
@@ -76,9 +80,11 @@ export const pageQuery = graphql`
     }
     mdx(id: { eq: $id }) {
       id
-      slug
       excerpt
       body
+      fields {
+        slug
+      }
       frontmatter {
         title
         date(formatString: "DD MMM YYYY")
@@ -87,6 +93,11 @@ export const pageQuery = graphql`
         episodeBytes
         episodeSeconds
         episodeNumber
+        socialImage {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
         postImages {
           childImageSharp {
             gatsbyImageData
@@ -95,14 +106,18 @@ export const pageQuery = graphql`
       }
     }
     previous: mdx(id: { eq: $previousPostId }) {
-      slug
+      fields {
+        slug
+      }
       frontmatter {
         title
         episodeNumber
       }
     }
     next: mdx(id: { eq: $nextPostId }) {
-      slug
+      fields {
+        slug
+      }
       frontmatter {
         title
         episodeNumber

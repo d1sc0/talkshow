@@ -6,6 +6,7 @@ episodeMp3: https://storage.googleapis.com/anothertalk-show/e0-sound-check.mp3
 episodeBytes: 2189425
 episodeSeconds: 68
 episodeNumber: 0
+socialImage: '../images/another-talk-show-square.jpg'
 postImages:
   - '../images/post-images/podcast-unsplash.jpg'
 ---
@@ -23,7 +24,7 @@ domitis amat ferebant Clymene iuvenum Achille, iaculabile.
 <div className="">
   <GatsbyImage
     alt="Just a boy scremaing into a microphone!"
-    image={getImage(props.frontmatter.postImages[0])}
+    image={getImage(props.data.mdx.frontmatter.postImages[0])}
     className="py-3 rounded-corners"
   />
 </div>

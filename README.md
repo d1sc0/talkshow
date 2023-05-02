@@ -21,8 +21,8 @@ Another Talk Show
 - ~~Create podcast feed and validate with services~~ done
 - ~~update subscribe links across site~~ just waiting on google to update (spotify and apple done - any link changes made)
 - ~~Twitter and facebook cards via SEO component~~ - done
-- ~~hook up panelbear some simple analytics
-- privacy notice for analytics?
+- ~~hook up panelbear some simple analytics~~ - done
+- ~~update to latest version of Gatsby ~~ - done
 - Create episode 1
 
 ## Maybe things for later (Roadmap)

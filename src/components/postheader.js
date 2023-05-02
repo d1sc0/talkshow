@@ -24,9 +24,9 @@ const PostHeader = ({ meta }) => {
   const episodeDate = meta.episodeDate
   const episodeSize = EpisodeSizer(meta.episodeBytes, 2)
   const episodeLength = EpisodeDuration(meta.episodeSeconds)
-  const facebookShare = `http://www.facebook.com/sharer.php?u=${siteUrl}/episodes/${episodeSlug}/`
-  const twitterShare = `https://twitter.com/intent/tweet?text=${meta.episodeTitle} - ${siteUrl}/episodes/${episodeSlug}/`
-  const emailShare = `mailto:?subject=Check out this podcast episode site&body=${meta.episodeTitle} - ${siteUrl}/episodes/${episodeSlug}/`
+  const facebookShare = `http://www.facebook.com/sharer.php?u=${siteUrl}/episodes${episodeSlug}`
+  const twitterShare = `https://twitter.com/intent/tweet?text=${meta.episodeTitle} - ${siteUrl}/episodes${episodeSlug}`
+  const emailShare = `mailto:?subject=Check out this podcast episode site&body=${meta.episodeTitle} - ${siteUrl}episodes/${episodeSlug}`
   return (
     <>
       <audio className="audioplayer" src={episodeMp3} controls>

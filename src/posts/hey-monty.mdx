@@ -6,6 +6,7 @@ episodeMp3: https://storage.googleapis.com/anothertalk-show/s1e1-sound-check.mp3
 episodeBytes: 1189425
 episodeSeconds: 1998
 episodeNumber: 1
+socialImage: '../images/another-talk-show-square.jpg'
 postImages:
   - '../images/page-images/hello-stu.jpg'
   - '../images/post-images/shiprock.jpg'
@@ -29,7 +30,7 @@ fata, intorquet?
 <div className="medium-post-image">
   <GatsbyImage
     alt="Stuart Mackenzie - host, producer, researcher, marketing manager and web developer"
-    image={getImage(props.frontmatter.postImages[1])}
+    image={getImage(props.data.mdx.frontmatter.postImages[1])}
     className="is-pulled-left mr-4 mb-4 rounded-corners"
   />
 </div>

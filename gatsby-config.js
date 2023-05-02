@@ -153,8 +153,8 @@ module.exports = {
           {
             serialize: ({ query: { site, allMdx } }) => {
               return allMdx.nodes.map(node => {
-                const episodeUrl = `${site.siteMetadata.siteUrl}/episodes/${node.slug}`
-                const episodeGuid = `ATS-${node.slug}`
+                const episodeUrl = `${site.siteMetadata.siteUrl}/episodes${node.fields.slug}`
+                const episodeGuid = `ATS-${node.fields.slug}`
                 return Object.assign({}, node.frontmatter, {
                   title: node.frontmatter.title,
                   description: node.frontmatter.description,
@@ -176,25 +176,25 @@ module.exports = {
                 })
               })
             },
-            query: `
-            {
-              allMdx(sort: { order: DESC, fields: frontmatter___date }) {
-                nodes {
-                  slug
-                  id
-                  frontmatter {
-                    date(formatString: "DD MMM YYYY")
-                    title
-                    description
-                    episodeMp3
-                    episodeBytes
-                    episodeSeconds
-                    episodeNumber
-                  }
-                }
-              }
-            }
-            `,
+            query: `{
+  allMdx(sort: {frontmatter: {date: DESC}}) {
+    nodes {
+      id
+      fields {
+        slug
+      }
+      frontmatter {
+        date(formatString: "DD MMM YYYY")
+        title
+        description
+        episodeMp3
+        episodeBytes
+        episodeSeconds
+        episodeNumber
+      }
+    }
+  }
+}`,
             output: '/podcast.xml',
             title: 'Another Talk Show',
           },

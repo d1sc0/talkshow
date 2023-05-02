@@ -26,7 +26,7 @@ const PostList = ({ data, pageContext }) => {
           episodeSeconds: post.frontmatter.episodeSeconds,
           episodeBytes: post.frontmatter.episodeBytes,
           episodeTitle: episodeTitle,
-          episodeSlug: post.slug,
+          episodeSlug: post.fields.slug,
           episodeDate: post.frontmatter.date,
           metaStlye: 'mr-4',
         }
@@ -38,7 +38,7 @@ const PostList = ({ data, pageContext }) => {
                   <div className="px-3">
                     <h2 className="is-size-3 is-size-4-touch has-text-weight-semibold">
                       <Link
-                        to={`/episodes/${post.slug}`}
+                        to={`/episodes${post.fields.slug}`}
                         className="episode-link"
                       >
                         {episodeTitle}
@@ -64,7 +64,7 @@ const PostList = ({ data, pageContext }) => {
                       <strong>Show Notes: </strong>
                       {post.excerpt}{' '}
                       <strong>
-                        <Link to={`/episodes/${post.slug}`}>
+                        <Link to={`/episodes${post.fields.slug}`}>
                           [Read more...]
                         </Link>
                       </strong>
@@ -115,13 +115,8 @@ export default PostList
 
 export const postListQuery = graphql`
   query postListQuery($skip: Int!, $limit: Int!) {
-    allMdx(
-      sort: { order: DESC, fields: frontmatter___date }
-      limit: $limit
-      skip: $skip
-    ) {
+    allMdx(sort: { frontmatter: { date: DESC } }, limit: $limit, skip: $skip) {
       nodes {
-        slug
         id
         excerpt(pruneLength: 480)
         frontmatter {
@@ -132,6 +127,9 @@ export const postListQuery = graphql`
           episodeBytes
           episodeSeconds
           episodeNumber
+        }
+        fields {
+          slug
         }
       }
     }
