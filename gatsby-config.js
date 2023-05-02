@@ -95,7 +95,7 @@ module.exports = {
           description:
             "This is Another Talk Show where a fairly ordinary host (Stuart Mackenzie) interviews a range of interesting people who aren't famous. Although they lack fame or fortune that doesn't mean they don't have interesting, entertaining or just simply awesome things to share.",
           generator: 'Another Talk Show',
-          copyright: 'Copyright 2019-2022 Stuart Mackenzie',
+          copyright: 'Copyright Stuart Mackenzie',
           language: 'en',
           custom_namespaces: {
             itunes: 'http://www.itunes.com/dtds/podcast-1.0.dtd',
